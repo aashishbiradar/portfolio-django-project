@@ -1,3 +1,5 @@
+{% load staticfiles %}
+
 <!doctype html>
 <html lang="en">
 
@@ -34,7 +36,7 @@
                 <div class="navbar-nav ml-auto">
                     <a class="nav-item nav-link" target="blank" href="https://www.linkedin.com/in/aashishbiradar/">LinkedIn</a>
                     <a class="nav-item nav-link" target="blank" href="https://github.com/aashishbiradar">Github</a>
-                    <a class="nav-item nav-link" href="#">Resume</a>
+                    <a class="nav-item nav-link" target="blank" href="{% static 'Aashish_Biradar_Resume_May_2019.pdf' %}">Resume</a>
                     <a class="nav-item nav-link" href="/blog">Blog</a>
                 </div>
             </div>
@@ -45,7 +47,8 @@
 
         <section class="jumbotron text-center">
             <div class="container">
-                <h1 class="jumbotron-heading">Hi, I'm Aashish</h1>
+                <img style="border-radius:50%;" src="{% static 'aashish-biradar.jpg'%}" alt="Aashish biradar">
+                <h1 class="jumbotron-heading pt-3">Hi, I'm Aashish</h1>
                 <p class="lead text-muted">Experienced Full Stack Developer with a demonstrated history of working in the e-learning industry. Skilled in Django, Python, Java, Nodejs, PHP, MySQL, MongoDB, jQuery and App Development.</p>
                 <p>
                     <a href="mailto:aashish.biradar@gmail.com" class="btn btn-primary my-2">Email Me</a>
