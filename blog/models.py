@@ -1,6 +1,8 @@
 from django.db import models
+import time
 
 class Blog(models.Model):
+    urlkey = models.CharField(max_length=255, default=str(int(time.time())))
     title = models.CharField(max_length=255)
     pub_date = models.DateTimeField()
     body = models.TextField()

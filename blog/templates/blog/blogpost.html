@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Aashish Biradar">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Aashish Biradar | Portfolio</title>
+    <title>{{blog.title}}</title>
 
     <style>
         .bd-placeholder-img {
@@ -59,20 +59,15 @@
 
     <main role="main">
         <div class="container">
-            <h1 class="text-center pt-3">Aashish Biradar's Blog</h1>
+            <div><a class="btn btn-outline-secondary btn-sm mt-3" href="/blog">< Go Back</a></div>
+            <h2 class="pt-2">{{blog.title}}</h2>
+            <hr>
             <div>
-                <h2>Latest Posts</h2>
-                <hr>
-                {% for blog in blogs.all %}
-                    <div>
-                        <h4>{{ blog.title}}</h4>
-                        <p>Published on {{blog.pub_date}}</p>
-                        <img style="max-width:100%;max-height:300px;" src="{{ blog.image.url}}" alt="{{ blog.title}">
-                        <div>
-                            <p>{{ blog.body}}</p>
-                        </div>
-                    </div>
-                {% endfor %}
+                <p>Published on {{blog.pub_date_pretty}}</p>
+                <img style="max-width:100%;max-height:300px;" src="{{ blog.image.url}}" alt="{{ blog.title}">
+                <div>
+                    <p>{{ blog.body}}</p>
+                </div>
             </div>
         </div>
     </main>
