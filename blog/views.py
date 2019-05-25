@@ -3,8 +3,8 @@ from .models import Blog
 
 def bloghome(req):
     blogs = Blog.objects
-    return render(req,'blog/bloghome.html', {'blogs' : blogs})
+    return render(req,'blog/bloghome.html', {'blogs' : blogs, 'header_title':'Aashish Biradar | Blog'})
 
 def blogpost(req,blog_urlkey):
     blog = get_object_or_404(Blog, urlkey=blog_urlkey)
-    return render(req,'blog/blogpost.html',{'blog':blog})
+    return render(req,'blog/blogpost.html',{'blog':blog, 'header_title' : blog.title})
