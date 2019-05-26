@@ -7,7 +7,7 @@
                 <hr>
                 {% for blog in blogs.all %}
                     <div>
-                        <h4><a href="/blog/{{blog.urlkey}}">{{ blog.title}}</a></h4>
+                        <h4><a href="{% url 'bloghome' %}{{blog.urlkey}}">{{ blog.title}}</a></h4>
                         <p>Published on {{blog.pub_date_pretty}}</p>
                         <img style="max-width:100%;max-height:300px;" src="{{ blog.image.url}}" alt="{{ blog.title}">
                         <div>

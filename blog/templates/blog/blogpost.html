@@ -1,12 +1,12 @@
 {% include "common/header.html" %}
 <main role="main">
     <div class="container">
-        <div><a class="btn btn-outline-secondary btn-sm mt-3" href="/blog">< Go Back</a></div>
+        <div><a class="btn btn-outline-secondary btn-sm mt-3" href="{% url 'bloghome' %}">< Go Back</a></div>
         <h2 class="pt-2">{{blog.title}}</h2>
         <hr>
         <div>
             <p>Published on {{blog.pub_date_pretty}}</p>
-            <img style="max-width:100%;max-height:300px;" src="{{ blog.image.url}}" alt="{{ blog.title}">
+            <img style="max-width:100%;" src="{{ blog.image.url}}" alt="{{ blog.title}">
             <div>
                 <p>{{ blog.body}}</p>
             </div>

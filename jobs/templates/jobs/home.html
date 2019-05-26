@@ -27,7 +27,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Aashish Biradar</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Aashish Biradar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -37,7 +37,7 @@
                     <a class="nav-item nav-link" target="blank" href="https://www.linkedin.com/in/aashishbiradar/">LinkedIn</a>
                     <a class="nav-item nav-link" target="blank" href="https://github.com/aashishbiradar">Github</a>
                     <a class="nav-item nav-link" target="blank" href="{% static 'Aashish_Biradar_Resume_May_2019.pdf' %}">Resume</a>
-                    <a class="nav-item nav-link" href="/blog">Blog</a>
+                    <a class="nav-item nav-link" href="{% url 'bloghome' %}">Blog</a>
                 </div>
             </div>
         </nav>
@@ -49,7 +49,7 @@
             <div class="container">
                 <img style="border-radius:50%;" src="{% static 'aashish-biradar.jpg'%}" alt="Aashish biradar">
                 <h1 class="jumbotron-heading pt-3">Hi, I'm Aashish</h1>
-                <p class="lead text-muted">Experienced Full Stack Developer with a demonstrated history of working in the e-learning industry. Skilled in Django, Python, Java, Nodejs, PHP, MySQL, MongoDB, jQuery and App Development.</p>
+                <p class="lead text-muted">Experienced Full Stack Developer with a demonstrated history of working in the e-learning industry. Skilled in Django, Python, Nodejs, PHP, MySQL, MongoDB, jQuery and App Development.</p>
                 <p>
                     <a href="mailto:aashish.biradar@gmail.com" class="btn btn-primary my-2">Email Me</a>
                 </p>
